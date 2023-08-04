@@ -1,0 +1,64 @@
+#clock {
+    font-family: Arial, sans-serif;
+    font-size: 150px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    color: #ebe8ea;
+  }
+  .date {
+    font-size: 90px;
+    font-style: italic;
+    margin-top: 10px;
+    color: #f7f4f6;
+    
+  }
+  
+  .controls {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .controls button {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #333;
+    color: #111010;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(250, 245, 245);
+  }
+  body{
+   
+    background-image: url("https://tse1.mm.bing.net/th?id=OIP.0pUXHa7HQycXrAhg9TSFiAHaE8&pid=Api&P=0&h=180");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button{
+  width: 100px;
+}
+  .controls button:hover {
+    background-color: #f7f5f6;
+    
+  }
+  h1{
+    font-size: 80px;
+    color: #faf9fa;
+  }
+  #gsk{
+    
+    background-repeat: no-repeat;
+    
+    width: 700px;
+      height: 600px;
+      margin-top: 150px;
+      border: 1px solid #f3ebeb;
+      padding: 10px;
+      margin: 20px auto;
+      background-color: #418aac;
+      border-radius: 50px;
+      background: transparent;
+  }

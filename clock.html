@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MY DIGITAL CLOCK</title>
+  <link rel="stylesheet" href="clock1.css">
+</head>
+<body>
+  <div id="gsk">
+  <ul><h1 align="center">DIGITAL CLOCK</h1></ul>
+  <div id="clock"></div>
+  <div class="controls">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </div>
+  <script type="text/javascript">
+    let clockInterval;
+let isClockRunning = false;
+
+function updateClock() {
+  const now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
+  hours = formatTime(hours);
+  minutes = formatTime(minutes);
+  seconds = formatTime(seconds);
+  const day = now.getDate();
+  const month = now.getMonth() + 1; 
+  const year = now.getFullYear();
+  const formattedDate = `${formatTime(month)}/${formatTime(day)}/${year}`;
+  const clockElement = document.getElementById('clock');
+  clockElement.innerHTML = `${hours}:${minutes}:${seconds}<br>  <span class="date">${formattedDate}</span>`;
+}
+function formatTime(time) {
+  return time < 10 ? `0${time}` : time;
+}
+function startClock() {
+  if (!isClockRunning) {
+    clockInterval = setInterval(updateClock, 1000);
+    isClockRunning = true;
+  }
+}
+function stopClock() {
+  clearInterval(clockInterval);
+  isClockRunning = false;
+}
+document.getElementById('start').addEventListener('click', startClock);
+
+document.getElementById('stop').addEventListener('click', stopClock);
+
+updateClock();
+  </script>
+</body>
+</div>
+</html>
